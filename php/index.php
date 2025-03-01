@@ -42,8 +42,8 @@ session_start();
                 <p>Notre système de réservation en ligne vous permet de gérer vos rendez-vous facilement et efficacement.</p>
                 <?php if (!isset($_SESSION['user_id'])): ?>
                     <div class="hero-buttons">
-                        <a href="/php/register.php" class="btn btn-primary">S'inscrire</a>
-                        <a href="/php/login.php" class="btn btn-secondary">Se connecter</a>
+                        <a href="register.php" class="btn btn-primary">S'inscrire</a>
+                        <a href="login.php" class="btn btn-secondary">Se connecter</a>
                     </div>
                 <?php else: ?>
                     <div class="hero-buttons">

@@ -11,7 +11,7 @@ $appointmentDate = $_POST['appointmentDate'];
 $appointmentTime = $_POST['appointmentTime'];
 
 // Database connection
-$conn = new mysqli('localhost','root','','portfolio');
+$conn = new mysqli('localhost','romainbo_uchez','u9gzYscDje7AHhuw.HaQ','romainbo_form');
 if($conn->connect_error){
     echo json_encode(['status' => 'error', 'message' => "Connection Failed: " . $conn->connect_error]);
     die();

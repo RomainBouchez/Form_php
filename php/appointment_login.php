@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-require_once'config.php';
+require_once __DIR__ . '/config.php';
 $conn = getDbConnection();
 
 // Check which action is requested

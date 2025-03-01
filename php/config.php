@@ -1,7 +1,7 @@
 <?php
 // Configuration de la base de données
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'romainbo_form'); // Utilisation de la même base de données que dans connect.php
+define('DB_NAME', 'romainbo_form');
 define('DB_USER', 'romainbo_uchez');
 define('DB_PASS', 'u9gzYscDje7AHhuw.HaQ');
 

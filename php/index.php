@@ -1,4 +1,15 @@
 <?php
+// Redirect all requests to the PHP directory
+$requestUri = $_SERVER['REQUEST_URI'];
+$basePath = '/'; // Change this if your site is in a subdirectory
+
+// If we're at the domain root, redirect to php/index.php
+if ($requestUri == $basePath) {
+    include_once 'php/index.php';
+    exit;
+}
+
+// Otherwise, continue with normal processing
 session_start();
 ?>
 <!DOCTYPE html>

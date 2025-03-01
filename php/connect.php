@@ -1,5 +1,6 @@
 <?php
 header('Content-Type: application/json');
+require_once 'config.php';
 
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
@@ -11,11 +12,7 @@ $appointmentDate = $_POST['appointmentDate'];
 $appointmentTime = $_POST['appointmentTime'];
 
 // Database connection
-$conn = new mysqli('localhost','romainbo_uchez','u9gzYscDje7AHhuw.HaQ','romainbo_form');
-if($conn->connect_error){
-    echo json_encode(['status' => 'error', 'message' => "Connection Failed: " . $conn->connect_error]);
-    die();
-}
+$conn = getDbConnection();
 
 // Check if email exists
 $checkEmail = $conn->prepare("SELECT email, password_hash, appointment_date, appointment_time FROM form WHERE email = ?");

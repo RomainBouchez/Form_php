@@ -7,12 +7,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-// Database connection
-$conn = new mysqli('localhost', 'root', '', 'portfolio');
-if ($conn->connect_error) {
-    echo json_encode(['status' => 'error', 'message' => "Connection Failed: " . $conn->connect_error]);
-    exit;
-}
+require_once'config.php';
+$conn = getDbConnection();
 
 // Check which action is requested
 $action = isset($_POST['action']) ? $_POST['action'] : '';
